@@ -1,0 +1,40 @@
+
+{% load static %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/login.css' %}">-->
+</head>
+
+<body>
+    <header>
+        <h1>Travello</h1>
+    </header>
+    <main>
+        <form id="login_form" class="form_class" action="register" method="post">
+		{% csrf_token %}
+            <div class="form_div"   >
+<!--                <labe>User Name:</label>-->
+                <input type="text" name="username" placeholder="User Name" class="field_class" required=" ">
+<!--                <label>Fname</label>-->
+                <input type="text" name="first_name" placeholder="First Name" class="field_class" required=" ">
+<!--                <label>Fname</label>-->
+                <input type="text" name="last_name" placeholder="Last Name" class="field_class" required=" ">
+<!--                <label>Fname</label>-->
+                <input type="email" name="email" placeholder="Email" class="field_class" required=" ">
+<!--                <label>Fname</label>-->
+                <input type="password" name="password" placeholder="Password" class="field_class" required=" ">
+<!--                <label>Fname</label>-->
+                <input type="password" name="password1" placeholder="Re-Enter Password" class="field_class" required=" ">
+                <input type="submit" class="submit_class">
+            </div>
+            <div class="info_div">
+                <p>Already Registered? <a href="login">Login Here!</a></p>
+            </div>
+        </form>
+		{% for msg in messages %}
+		{{msg}}
+		{% endfor %}
+    </main>
+    <footer>
+<!--        <p>Desenvolvido por <a href="#">JM_Code&trade;</a></p>-->
+    </footer>
+</body>
