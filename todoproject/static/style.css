@@ -1,0 +1,26 @@
+.banner{
+    background-color:SeaGreen;
+    color:ivory;
+    width:100%;
+    height:100px;
+    margin-bottom:20px;
+}
+
+
+.banner-text{
+    top:50px;
+    left:47%;
+    position:absolute;
+    transform:transform;
+}
+
+.done{
+background:silver;
+
+}
+
+
+body{
+    background-color:ivory;
+    color:SeaGreen;
+}
